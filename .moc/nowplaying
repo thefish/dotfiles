@@ -1,0 +1,5 @@
+#!/bin/sh
+OUTPUT=$(mocp -Q "%song;%artist;%album")
+#echo "output : $OUTPUT"
+IFS=';' read -r song artist album <<< "$OUTPUT"
+notify-send -u LOW -t 2500 -a mocp "$song" "$artist\n<i>$album</i>"

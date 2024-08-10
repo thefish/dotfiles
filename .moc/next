@@ -1,0 +1,2 @@
+#!/bin/sh
+mocp -f
